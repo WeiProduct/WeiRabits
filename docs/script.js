@@ -1,18 +1,18 @@
-// Language translations
+
 const translations = {
     zh: {
-        // Navigation
+        
         'nav-features': '功能特点',
         'nav-screenshots': '应用截图',
         'nav-download': '下载',
         
-        // Hero
+        
         'hero-title': '科学养成好习惯',
         'hero-subtitle': '基于《原子习惯》理念，通过身份认同、触发-行动-奖励循环，帮助您建立持久的好习惯',
         'download-appstore': 'App Store 下载',
         'learn-more': '了解更多',
         
-        // Features
+        
         'features-title': '强大功能，助您成功',
         'feature-1-title': '身份驱动',
         'feature-1-desc': '基于"我是..."的身份认同，从根本上改变行为模式',
@@ -27,14 +27,14 @@ const translations = {
         'feature-6-title': '双语支持',
         'feature-6-desc': '中英文界面随时切换，满足不同需求',
         
-        // Screenshots
+        
         'screenshots-title': '应用界面展示',
         'screenshot-1': '今日习惯',
         'screenshot-2': '创建习惯',
         'screenshot-3': '数据统计',
         'screenshot-4': '番茄钟',
         
-        // How it works
+        
         'how-title': '简单三步，开始改变',
         'step-1-title': '定义身份',
         'step-1-desc': '设定"我是..."的身份目标，如"我是一个爱运动的人"',
@@ -43,31 +43,31 @@ const translations = {
         'step-3-title': '持续追踪',
         'step-3-desc': '每日打卡，查看进度，获得成就感',
         
-        // Download
+        
         'download-title': '立即开始您的习惯养成之旅',
         'download-subtitle': '完全免费，无广告，注重隐私保护',
         'privacy-policy': '隐私政策',
         'contact': '联系我们',
         
-        // Footer
+        
         'footer-rights': '保留所有权利。',
         
-        // Alt texts
+        
         'app-store-alt': '从 App Store 下载'
     },
     en: {
-        // Navigation
+        
         'nav-features': 'Features',
         'nav-screenshots': 'Screenshots',
         'nav-download': 'Download',
         
-        // Hero
+        
         'hero-title': 'Build Better Habits',
         'hero-subtitle': 'Based on Atomic Habits methodology, build lasting habits through identity, cue-routine-reward loops',
         'download-appstore': 'Download on App Store',
         'learn-more': 'Learn More',
         
-        // Features
+        
         'features-title': 'Powerful Features for Success',
         'feature-1-title': 'Identity-Driven',
         'feature-1-desc': 'Change behaviors fundamentally through "I am..." identity statements',
@@ -82,14 +82,14 @@ const translations = {
         'feature-6-title': 'Bilingual Support',
         'feature-6-desc': 'Switch between Chinese and English anytime',
         
-        // Screenshots
+        
         'screenshots-title': 'App Interface',
         'screenshot-1': "Today's Habits",
         'screenshot-2': 'Create Habit',
         'screenshot-3': 'Statistics',
         'screenshot-4': 'Pomodoro Timer',
         
-        // How it works
+        
         'how-title': 'Three Simple Steps to Change',
         'step-1-title': 'Define Identity',
         'step-1-desc': 'Set "I am..." identity goals, like "I am an active person"',
@@ -98,31 +98,31 @@ const translations = {
         'step-3-title': 'Track Progress',
         'step-3-desc': 'Check in daily, view progress, gain achievement',
         
-        // Download
+        
         'download-title': 'Start Your Habit Journey Today',
         'download-subtitle': 'Completely free, no ads, privacy-focused',
         'privacy-policy': 'Privacy Policy',
         'contact': 'Contact Us',
         
-        // Footer
+        
         'footer-rights': 'All rights reserved.',
         
-        // Alt texts
+        
         'app-store-alt': 'Download on the App Store'
     }
 };
 
-// Current language
+
 let currentLang = localStorage.getItem('preferredLang') || 'zh';
 
-// Initialize page
+
 document.addEventListener('DOMContentLoaded', () => {
     updateLanguage();
     addSmoothScrolling();
     addScrollEffects();
 });
 
-// Language switching
+
 function toggleLanguage() {
     currentLang = currentLang === 'zh' ? 'en' : 'zh';
     localStorage.setItem('preferredLang', currentLang);
@@ -130,10 +130,10 @@ function toggleLanguage() {
 }
 
 function updateLanguage() {
-    // Update HTML lang attribute
+    
     document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
     
-    // Update all translated elements
+    
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[currentLang][key]) {
@@ -141,7 +141,7 @@ function updateLanguage() {
         }
     });
     
-    // Update alt texts
+    
     document.querySelectorAll('[data-i18n-alt]').forEach(element => {
         const key = element.getAttribute('data-i18n-alt');
         if (translations[currentLang][key]) {
@@ -149,7 +149,7 @@ function updateLanguage() {
         }
     });
     
-    // Update language switch button
+    
     const langZh = document.querySelector('.lang-zh');
     const langEn = document.querySelector('.lang-en');
     if (currentLang === 'zh') {
@@ -161,7 +161,7 @@ function updateLanguage() {
     }
 }
 
-// Smooth scrolling for navigation links
+
 function addSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -179,7 +179,7 @@ function addSmoothScrolling() {
     });
 }
 
-// Scroll effects
+
 function addScrollEffects() {
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
@@ -187,7 +187,7 @@ function addScrollEffects() {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
-        // Navbar background effect
+        
         if (currentScroll > 50) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
@@ -196,14 +196,14 @@ function addScrollEffects() {
             navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
         }
         
-        // Animate elements on scroll
+        
         animateOnScroll();
         
         lastScroll = currentScroll;
     });
 }
 
-// Animate elements when they come into view
+
 function animateOnScroll() {
     const elements = document.querySelectorAll('.feature-card, .step, .screenshot-item');
     
@@ -219,7 +219,7 @@ function animateOnScroll() {
     });
 }
 
-// Screenshot carousel touch support
+
 const carousel = document.querySelector('.screenshots-carousel');
 if (carousel) {
     let isDown = false;

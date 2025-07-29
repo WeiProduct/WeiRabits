@@ -6,11 +6,10 @@ Generate placeholder screenshots for RHabits landing page
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Create screenshots directory if it doesn't exist
+
 os.makedirs('docs', exist_ok=True)
 
 def create_gradient(width, height, start_color, end_color):
-    """Create a gradient image"""
     image = Image.new('RGB', (width, height))
     draw = ImageDraw.Draw(image)
     
@@ -23,15 +22,14 @@ def create_gradient(width, height, start_color, end_color):
     return image
 
 def create_phone_screenshot(width, height, title, bg_start, bg_end):
-    """Create a phone screenshot mockup"""
-    # Create gradient background
+
     img = create_gradient(width, height, bg_start, bg_end)
     draw = ImageDraw.Draw(img)
     
-    # Draw status bar
+
     draw.rectangle([(0, 0), (width, 44)], fill=(255, 255, 255, 230))
     
-    # Draw content area
+
     content_margin = 20
     content_top = 80
     draw.rounded_rectangle(
@@ -40,7 +38,7 @@ def create_phone_screenshot(width, height, title, bg_start, bg_end):
         fill=(255, 255, 255, 240)
     )
     
-    # Draw title
+
     try:
         font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 36)
         small_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 18)
@@ -48,14 +46,14 @@ def create_phone_screenshot(width, height, title, bg_start, bg_end):
         font = ImageFont.load_default()
         small_font = ImageFont.load_default()
     
-    # Center the title
+
     bbox = draw.textbbox((0, 0), title, font=font)
     text_width = bbox[2] - bbox[0]
     text_x = (width - text_width) // 2
     draw.text((text_x, content_top + 40), title, fill=(0, 0, 0), font=font)
     
-    # Add some UI elements
-    # Draw habit cards
+
+
     card_y = content_top + 120
     for i in range(3):
         card_margin = 40
@@ -68,7 +66,7 @@ def create_phone_screenshot(width, height, title, bg_start, bg_end):
             width=1
         )
         
-        # Draw checkmark circle
+
         circle_x = card_margin + 30
         circle_y = card_y + card_height // 2
         draw.ellipse(
@@ -82,7 +80,7 @@ def create_phone_screenshot(width, height, title, bg_start, bg_end):
     
     return img
 
-# Generate screenshots
+
 screenshots = [
     {
         'name': 'hero-screenshot.png',

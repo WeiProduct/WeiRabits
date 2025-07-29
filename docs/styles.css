@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -104,7 +104,7 @@ body {
     color: white;
 }
 
-/* Hero Section */
+
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -197,7 +197,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Features Section */
+
 .features {
     padding: 80px 0;
     background: var(--bg-secondary);
@@ -246,7 +246,7 @@ body {
     line-height: 1.8;
 }
 
-/* Screenshots Section */
+
 .screenshots {
     padding: 80px 0;
 }
@@ -278,7 +278,7 @@ body {
     color: var(--text-primary);
 }
 
-/* How It Works Section */
+
 .how-it-works {
     padding: 80px 0;
     background: var(--bg-secondary);
@@ -321,7 +321,7 @@ body {
     line-height: 1.8;
 }
 
-/* Download Section */
+
 .download {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -362,7 +362,7 @@ body {
     text-decoration: underline;
 }
 
-/* Footer */
+
 .footer {
     padding: 2rem 0;
     background: var(--text-primary);
@@ -370,7 +370,7 @@ body {
     text-align: center;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
@@ -428,12 +428,12 @@ body {
     }
 }
 
-/* Smooth Scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Loading Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
