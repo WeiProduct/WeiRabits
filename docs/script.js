@@ -9,7 +9,7 @@ const translations = {
         
         'hero-title': '科学养成好习惯',
         'hero-subtitle': '基于《原子习惯》理念，通过身份认同、触发-行动-奖励循环，帮助您建立持久的好习惯',
-        'download-appstore': 'App Store 下载',
+        'download-appstore': '联系产品支持',
         'learn-more': '了解更多',
         
         
@@ -48,12 +48,13 @@ const translations = {
         'download-subtitle': '完全免费，无广告，注重隐私保护',
         'privacy-policy': '隐私政策',
         'contact': '联系我们',
+        'company-site': '访问 WeiProduct',
         
         
         'footer-rights': '保留所有权利。',
         
         
-        'app-store-alt': '从 App Store 下载'
+        'app-store-alt': '联系产品支持'
     },
     en: {
         
@@ -64,7 +65,7 @@ const translations = {
         
         'hero-title': 'Build Better Habits',
         'hero-subtitle': 'Based on Atomic Habits methodology, build lasting habits through identity, cue-routine-reward loops',
-        'download-appstore': 'Download on App Store',
+        'download-appstore': 'Contact product support',
         'learn-more': 'Learn More',
         
         
@@ -103,12 +104,13 @@ const translations = {
         'download-subtitle': 'Completely free, no ads, privacy-focused',
         'privacy-policy': 'Privacy Policy',
         'contact': 'Contact Us',
+        'company-site': 'Visit WeiProduct',
         
         
         'footer-rights': 'All rights reserved.',
         
         
-        'app-store-alt': 'Download on the App Store'
+        'app-store-alt': 'Contact product support'
     }
 };
 
@@ -117,6 +119,16 @@ let currentLang = localStorage.getItem('preferredLang') || 'zh';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const langSwitch = document.getElementById('langSwitch');
+    if (langSwitch) {
+        langSwitch.addEventListener('click', toggleLanguage);
+    }
+
+    const currentYear = document.getElementById('currentYear');
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+
     updateLanguage();
     addSmoothScrolling();
     addScrollEffects();
@@ -152,12 +164,9 @@ function updateLanguage() {
     
     const langZh = document.querySelector('.lang-zh');
     const langEn = document.querySelector('.lang-en');
-    if (currentLang === 'zh') {
-        langZh.style.display = 'inline';
-        langEn.style.display = 'none';
-    } else {
-        langZh.style.display = 'none';
-        langEn.style.display = 'inline';
+    if (langZh && langEn) {
+        langZh.hidden = currentLang !== 'zh';
+        langEn.hidden = currentLang === 'zh';
     }
 }
 
@@ -182,7 +191,6 @@ function addSmoothScrolling() {
 
 function addScrollEffects() {
     const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
     
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -198,8 +206,6 @@ function addScrollEffects() {
         
         
         animateOnScroll();
-        
-        lastScroll = currentScroll;
     });
 }
 
