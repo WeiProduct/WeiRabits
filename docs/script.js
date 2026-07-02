@@ -9,7 +9,7 @@ const translations = {
         
         'hero-title': '科学养成好习惯',
         'hero-subtitle': '基于《原子习惯》理念，通过身份认同、触发-行动-奖励循环，帮助您建立持久的好习惯',
-        'download-appstore': '联系产品支持',
+        'download-appstore': 'App Store 下载',
         'learn-more': '了解更多',
         
         
@@ -65,7 +65,7 @@ const translations = {
         
         'hero-title': 'Build Better Habits',
         'hero-subtitle': 'Based on Atomic Habits methodology, build lasting habits through identity, cue-routine-reward loops',
-        'download-appstore': 'Contact product support',
+        'download-appstore': 'Download on the App Store',
         'learn-more': 'Learn More',
         
         
