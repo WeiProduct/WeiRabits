@@ -1,10 +1,317 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-theme="light">
 <head>
-    <meta http-equiv="refresh" content="0; url=./docs/index.html">
-    <title>Redirecting to WeiRabits</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007AFF" id="themeColorMeta">
+    <meta name="robots" content="index, follow">
+    <title>WeiRabits - 科学养成好习惯 | Build Better Habits</title>
+    <meta name="description" content="WeiRabits 是一款基于《原子习惯》的 iOS 习惯养成应用：身份驱动、习惯循环、番茄钟专注、连续记录与数据分析，中英双语，数据全本地存储。">
+    <meta property="og:title" content="WeiRabits | 科学养成好习惯 · Build Better Habits">
+    <meta property="og:description" content="基于《原子习惯》的身份驱动习惯养成：习惯循环、番茄钟、连续记录、数据分析，数据全本地存储。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weiproduct.github.io/WeiRabits/">
+    <meta property="og:image" content="https://weiproduct.github.io/WeiRabits/assets/hero-screenshot.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WeiRabits | Build Better Habits">
+    <meta name="twitter:description" content="Identity-driven habit building with the habit loop, Pomodoro focus, streaks and analytics. Private by design.">
+    <meta name="twitter:image" content="https://weiproduct.github.io/WeiRabits/assets/hero-screenshot.png">
+    <link rel="canonical" href="https://weiproduct.github.io/WeiRabits/">
+    <link rel="alternate" hreflang="zh-CN" href="https://weiproduct.github.io/WeiRabits/">
+    <link rel="alternate" hreflang="en" href="https://weiproduct.github.io/WeiRabits/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23007AFF'/%3E%3Cstop offset='1' stop-color='%235AC8FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='white' stroke-width='7'/%3E%3Cpath d='M38 51 l8 8 l16 -18' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23007AFF'/%3E%3Cstop offset='1' stop-color='%235AC8FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='white' stroke-width='7'/%3E%3Cpath d='M38 51 l8 8 l16 -18' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WeiRabits",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS",
+      "url": "https://weiproduct.github.io/WeiRabits/",
+      "image": "https://weiproduct.github.io/WeiRabits/assets/hero-screenshot.png",
+      "downloadUrl": "https://apps.apple.com/app/id6748370992",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "WeiProduct", "url": "https://weiproduct.com/" },
+      "description": "WeiRabits is an identity-driven habit-building app based on Atomic Habits, with the habit loop, Pomodoro focus, streaks, analytics and bilingual support. All data stored on-device."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "WeiRabits 需要联网吗？", "acceptedAnswer": { "@type": "Answer", "text": "不需要。所有功能均可离线使用，您的习惯数据全部保存在设备本地，不会离开手机。" } },
+        { "@type": "Question", "name": "数据会同步到云端吗？", "acceptedAnswer": { "@type": "Answer", "text": "不会。数据只保存在您的设备本地，我们不上传、不收集、不追踪任何习惯信息。" } },
+        { "@type": "Question", "name": "什么是身份驱动的习惯养成？", "acceptedAnswer": { "@type": "Answer", "text": "从「我是一个……的人」出发设定身份，让每一次打卡都强化这个身份，习惯因此更容易长期坚持。" } },
+        { "@type": "Question", "name": "习惯循环是怎么运作的？", "acceptedAnswer": { "@type": "Answer", "text": "为习惯设置提示、渴望、行动与奖励，形成完整回路，让好习惯自然而然被触发和重复。" } },
+        { "@type": "Question", "name": "番茄钟如何与习惯结合？", "acceptedAnswer": { "@type": "Answer", "text": "可为需要专注的习惯启动内置番茄钟，专注时长会自动计入统计，帮助你看到坚持的成果。" } },
+        { "@type": "Question", "name": "支持哪些语言？", "acceptedAnswer": { "@type": "Answer", "text": "完整支持简体中文与英文界面，可随时一键切换。" } }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <p>Redirecting to <a href="./docs/index.html">WeiRabits website</a>...</p>
+    <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="nav-brand" href="#" aria-label="WeiRabits">
+                <span class="brand-icon" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" width="34" height="34"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007AFF"/><stop offset="1" stop-color="#5AC8FA"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#bg)"/><circle cx="50" cy="50" r="26" fill="none" stroke="#fff" stroke-width="7"/><path d="M38 51 l8 8 l16 -18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="brand-name">WeiRabits</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#how" class="nav-link" data-i18n="navHow">使用流程</a>
+                <a href="#features" class="nav-link" data-i18n="navFeatures">功能特点</a>
+                <a href="#screenshots" class="nav-link" data-i18n="navScreenshots">应用截图</a>
+                <a href="#faq" class="nav-link" data-i18n="navFaq">常见问题</a>
+                <button class="icon-btn" type="button" id="themeToggle" aria-label="切换深色模式">
+                    <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+                    <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="lang-switch" type="button" id="langSwitch" aria-label="Switch language">EN</button>
+                <a href="https://apps.apple.com/app/id6748370992" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="navGet">获取 App</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="eyebrow" data-i18n="heroEyebrow">✦ 基于《原子习惯》</span>
+                <h1 class="hero-title" data-i18n="heroTitle">科学养成好习惯</h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">从身份认同出发，用「提示 → 渴望 → 行动 → 奖励」的习惯循环，帮你建立并坚持真正长久的好习惯。</p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/id6748370992" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <svg class="apple-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <span class="download-label" data-i18n="downloadBtn">App Store 下载</span>
+                    </a>
+                    <a href="#how" class="btn btn-secondary" data-i18n="learnMore">了解更多</a>
+                </div>
+                <ul class="hero-trust">
+                    <li data-i18n="trust1">🔒 数据全本地</li>
+                    <li data-i18n="trust2">📶 离线可用</li>
+                    <li data-i18n="trust3">🌏 中英双语</li>
+                </ul>
+            </div>
+            <div class="hero-visual">
+                <div class="device" role="img" aria-label="WeiRabits 今日习惯与习惯循环">
+                    <div class="device-notch" aria-hidden="true"></div>
+                    <div class="hb">
+                        <div class="hb-head">
+                            <span class="hb-title" data-i18n="hbToday">今天</span>
+                            <span class="hb-streak">🔥 <span data-i18n="hbStreak">连续 12 天</span></span>
+                        </div>
+                        <div class="identity">
+                            <span data-i18n="identityLabel">我的身份</span>
+                            <strong data-i18n="identityValue">我是一个自律的人</strong>
+                        </div>
+                        <div class="loop">
+                            <svg class="loop-ring" viewBox="0 0 220 220" aria-hidden="true">
+                                <defs><linearGradient id="loopGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007AFF"/><stop offset="1" stop-color="#5AC8FA"/></linearGradient></defs>
+                                <circle class="loop-track" cx="110" cy="110" r="72"/>
+                                <circle class="loop-arc" cx="110" cy="110" r="72"/>
+                            </svg>
+                            <span class="loop-center"><span data-i18n="loopKicker">习惯回路</span><strong data-i18n="loopCenter">习惯循环</strong></span>
+                            <span class="loop-node ln-top">💡 <b data-i18n="loopCue">提示</b></span>
+                            <span class="loop-node ln-right">✨ <b data-i18n="loopCraving">渴望</b></span>
+                            <span class="loop-node ln-bottom">🏃 <b data-i18n="loopAction">行动</b></span>
+                            <span class="loop-node ln-left">🎁 <b data-i18n="loopReward">奖励</b></span>
+                        </div>
+                        <div class="hb-progress">
+                            <div class="row"><span data-i18n="hbDone">今日完成</span><span class="pct">3 / 4</span></div>
+                            <div class="hb-bar"><i></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-chip chip-a" data-i18n="chipA">🔥 连续 12 天</div>
+                <div class="hero-chip chip-b" data-i18n="chipB">✅ 今日 3/4</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proof" aria-label="trust">
+        <div class="container proof-row">
+            <div class="proof-rating">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <div class="proof-sub"><strong>App Store</strong><span data-i18n="proofRating">习惯养成 · 效率工具</span></div>
+            </div>
+            <div class="proof-stats">
+                <div class="stat"><strong>iOS</strong><span data-i18n="stat1">原生体验</span></div>
+                <div class="stat"><strong>100%</strong><span data-i18n="stat2">本地存储</span></div>
+                <div class="stat"><strong>EN / 中文</strong><span data-i18n="stat3">双语界面</span></div>
+                <div class="stat"><strong>0</strong><span data-i18n="stat4">广告 · 追踪</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="how">
+        <div class="container">
+            <h2 class="section-title" data-i18n="howTitle">简单三步，开始改变</h2>
+            <p class="section-sub" data-i18n="howSub">先想清楚你想成为谁，剩下的每天做一点。</p>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-badge">1</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></div>
+                    <h3 data-i18n="step1Title">定义身份</h3>
+                    <p data-i18n="step1Desc">设定「我是一个……的人」的身份目标，比如「我是一个热爱运动的人」。</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-badge">2</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 3v6h-6"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+                    <h3 data-i18n="step2Title">设计习惯</h3>
+                    <p data-i18n="step2Desc">创建习惯，配置提示、行动与奖励，搭起属于自己的习惯循环。</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-badge">3</div>
+                    <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                    <h3 data-i18n="step3Title">持续追踪</h3>
+                    <p data-i18n="step3Desc">每日打卡、专注番茄钟，累积连续天数，看着进度不断刷新。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-i18n="featuresTitle">强大功能，助您成功</h2>
+            <p class="section-sub" data-i18n="featuresSub">为长期坚持而设计的每一个细节。</p>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></div>
+                    <h3 data-i18n="feature1Title">身份驱动</h3>
+                    <p data-i18n="feature1Desc">基于「我是……」的身份认同，从根本上重塑行为模式，让改变由内而外发生。</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 2.3 5.6"/><path d="M4 20v-5h5"/></svg></div>
+                    <h3 data-i18n="feature2Title">习惯循环</h3>
+                    <p data-i18n="feature2Desc">设置提示、渴望、行动与奖励，构建完整的习惯回路，让好习惯自动被触发。</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+                    <h3 data-i18n="feature3Title">番茄钟专注</h3>
+                    <p data-i18n="feature3Desc">内置番茄钟与习惯联动，专注时长自动记录，让坚持看得见、更有动力。</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></svg></div>
+                    <h3 data-i18n="feature4Title">数据分析</h3>
+                    <p data-i18n="feature4Desc">可视化追踪进度，智能分析你的坚持规律，给出更贴合你的改进建议。</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.8 3 4.5 4.6 4.5 8.2A4.5 4.5 0 0 1 12 15.7a4.5 4.5 0 0 1-4.5-4.5C7.5 7.6 10.2 6 12 3z"/><path d="M12 21c3.3 0 6-2.4 6-5.6 0-1-.2-1.9-.5-2.7"/><path d="M12 21c-3.3 0-6-2.4-6-5.6 0-1 .2-1.9.5-2.7"/></svg></div>
+                    <h3 data-i18n="feature5Title">连续记录</h3>
+                    <p data-i18n="feature5Desc">激励性的连续天数记录，一天天累积成就感，不断挑战自己的最佳纪录。</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z"/></svg></div>
+                    <h3 data-i18n="feature6Title">中英双语</h3>
+                    <p data-i18n="feature6Desc">中英文界面随时一键切换，满足不同用户的使用习惯与语言偏好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2 class="section-title" data-i18n="screenshotsTitle">应用界面展示</h2>
+            <p class="section-sub" data-i18n="screenshotsSub">左右滑动，点击可放大查看。</p>
+            <div class="gallery">
+                <button class="gal-arrow prev" type="button" aria-label="上一张" id="galPrev">‹</button>
+                <div class="gal-track" id="galTrack">
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="assets/screenshot-1.png" alt="今日习惯" width="258" height="560" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot1">今日习惯一览</figcaption>
+                    </figure>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="assets/screenshot-2.png" alt="创建习惯" width="258" height="560" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot2">创建身份与习惯</figcaption>
+                    </figure>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="assets/screenshot-3.png" alt="数据统计" width="258" height="560" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot3">进度与数据统计</figcaption>
+                    </figure>
+                    <figure class="shot reveal">
+                        <div class="phone"><img src="assets/screenshot-4.png" alt="番茄钟" width="258" height="560" loading="lazy" decoding="async"></div>
+                        <figcaption data-i18n="shot4">番茄钟专注计时</figcaption>
+                    </figure>
+                </div>
+                <button class="gal-arrow next" type="button" aria-label="下一张" id="galNext">›</button>
+            </div>
+            <div class="gal-dots" id="galDots" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <section class="privacy">
+        <div class="container privacy-card">
+            <div class="privacy-lead">
+                <h2 data-i18n="privacyTitle">您的习惯，只属于您</h2>
+                <p data-i18n="privacyDesc">没有账号，没有云端，没有追踪。所有习惯数据都保存在设备本地，卸载即彻底清除。</p>
+            </div>
+            <ul class="privacy-points">
+                <li><span aria-hidden="true">📱</span><span data-i18n="pp1">数据本地存储</span></li>
+                <li><span aria-hidden="true">📶</span><span data-i18n="pp2">离线即可使用</span></li>
+                <li><span aria-hidden="true">🚫</span><span data-i18n="pp3">无任何追踪</span></li>
+                <li><span aria-hidden="true">🎯</span><span data-i18n="pp4">无广告干扰</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faqTitle">常见问题</h2>
+            <div class="faq-list">
+                <details class="faq-item reveal"><summary data-i18n="q1">WeiRabits 需要联网吗？</summary><p data-i18n="a1">不需要。所有功能均可离线使用，您的习惯数据全部保存在设备本地，不会离开手机。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q2">数据会同步到云端吗？</summary><p data-i18n="a2">不会。数据只保存在您的设备本地，我们不上传、不收集、不追踪任何习惯信息。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q3">什么是身份驱动的习惯养成？</summary><p data-i18n="a3">从「我是一个……的人」出发设定身份，让每一次打卡都强化这个身份，习惯因此更容易长期坚持。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q4">习惯循环是怎么运作的？</summary><p data-i18n="a4">为习惯设置提示、渴望、行动与奖励，形成完整回路，让好习惯自然而然被触发和重复。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q5">番茄钟如何与习惯结合？</summary><p data-i18n="a5">可为需要专注的习惯启动内置番茄钟，专注时长会自动计入统计，帮助你看到坚持的成果。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q6">支持哪些语言？</summary><p data-i18n="a6">完整支持简体中文与英文界面，可随时一键切换。</p></details>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 data-i18n="downloadTitle">立即开始您的习惯养成之旅</h2>
+                <p data-i18n="downloadSubtitle">完全免费，无广告，注重隐私保护。</p>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/app/id6748370992" class="app-store-badge" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy">
+                    </a>
+                </div>
+                <p class="download-note" data-i18n="downloadNote">免费下载 · 无广告 · 尊重隐私</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear">2026</span> <span data-i18n="footerRights">WeiProduct. 保留所有权利。</span></p>
+                <p data-i18n="footerMadeBy">Built by WeiProduct</p>
+                <p><a href="docs/privacy-policy.html" data-i18n="privacyPolicy">隐私政策</a> · Contact: <a href="mailto:1597498880weiproduct@gmail.com?subject=WeiRabits%20support">1597498880weiproduct@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-app">
+            <span class="brand-icon sm" aria-hidden="true"><svg viewBox="0 0 100 100" width="30" height="30"><rect width="100" height="100" rx="24" fill="url(#bg)"/><circle cx="50" cy="50" r="26" fill="none" stroke="#fff" stroke-width="7"/><path d="M38 51 l8 8 l16 -18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="sticky-txt"><strong>WeiRabits</strong><span data-i18n="stickySub">习惯养成 · 免费</span></div>
+        </div>
+        <a href="https://apps.apple.com/app/id6748370992" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" data-i18n="stickyGet">获取</a>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
