@@ -50,7 +50,9 @@
         { "@type": "Question", "name": "什么是身份驱动的习惯养成？", "acceptedAnswer": { "@type": "Answer", "text": "从「我是一个……的人」出发设定身份，让每一次打卡都强化这个身份，习惯因此更容易长期坚持。" } },
         { "@type": "Question", "name": "习惯循环是怎么运作的？", "acceptedAnswer": { "@type": "Answer", "text": "为习惯设置提示、渴望、行动与奖励，形成完整回路，让好习惯自然而然被触发和重复。" } },
         { "@type": "Question", "name": "番茄钟如何与习惯结合？", "acceptedAnswer": { "@type": "Answer", "text": "可为需要专注的习惯启动内置番茄钟，专注时长会自动计入统计，帮助你看到坚持的成果。" } },
-        { "@type": "Question", "name": "支持哪些语言？", "acceptedAnswer": { "@type": "Answer", "text": "完整支持简体中文与英文界面，可随时一键切换。" } }
+        { "@type": "Question", "name": "支持哪些语言？", "acceptedAnswer": { "@type": "Answer", "text": "完整支持简体中文与英文界面，可随时一键切换。" } },
+        { "@type": "Question", "name": "完全免费吗？有广告吗？", "acceptedAnswer": { "@type": "Answer", "text": "完全免费，没有广告。下载后即可使用全部核心功能。" } },
+        { "@type": "Question", "name": "WeiRabits 和《原子习惯》是什么关系？", "acceptedAnswer": { "@type": "Answer", "text": "应用的方法论——身份驱动、习惯循环、复利式坚持——受《原子习惯》一书启发；WeiRabits 由 WeiProduct 独立开发，与原书作者及出版方没有任何隶属或合作关系。" } }
       ]
     }
     </script>
@@ -79,6 +81,7 @@
                 <a href="https://apps.apple.com/app/id6748370992" class="btn btn-primary btn-sm nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="navGet">获取 App</a>
             </div>
         </div>
+        <div class="scroll-progress" aria-hidden="true"><i id="scrollProgressBar"></i></div>
     </nav>
 
     <main id="main">
@@ -153,8 +156,78 @@
         </div>
     </section>
 
+    <section id="try" class="try">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="tryEyebrow">亲手试试</span>
+            <h2 class="section-title" data-i18n="tryTitle">30 秒，搭好你的第一个习惯回路</h2>
+            <p class="section-sub" data-i18n="trySub">选一个身份、一个提示和一个奖励，右边就是它在 App 里的样子。</p>
+            <div class="try-grid">
+                <div class="try-controls reveal">
+                    <div class="try-step">
+                        <span class="try-step-num" aria-hidden="true">1</span>
+                        <div class="try-step-body">
+                            <h3 data-i18n="tryStep1">选择身份</h3>
+                            <div class="chip-row" id="tryIdentity">
+                                <button type="button" class="try-chip selected" aria-pressed="true" data-key="tryIdentity1" data-i18n="tryIdentity1">我是一个爱运动的人</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryIdentity2" data-i18n="tryIdentity2">我是一个阅读者</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryIdentity3" data-i18n="tryIdentity3">我是一个早起者</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="try-step">
+                        <span class="try-step-num" aria-hidden="true">2</span>
+                        <div class="try-step-body">
+                            <h3 data-i18n="tryStep2">选择提示</h3>
+                            <div class="chip-row" id="tryCue">
+                                <button type="button" class="try-chip selected" aria-pressed="true" data-key="tryCue1" data-i18n="tryCue1">早晨闹钟响后</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryCue2" data-i18n="tryCue2">午饭之后</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryCue3" data-i18n="tryCue3">晚上刷牙前</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="try-step">
+                        <span class="try-step-num" aria-hidden="true">3</span>
+                        <div class="try-step-body">
+                            <h3 data-i18n="tryStep3">选择奖励</h3>
+                            <div class="chip-row" id="tryReward">
+                                <button type="button" class="try-chip selected" aria-pressed="true" data-key="tryReward1" data-i18n="tryReward1">一杯好咖啡</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryReward2" data-i18n="tryReward2">连续记录 +1</button>
+                                <button type="button" class="try-chip" aria-pressed="false" data-key="tryReward3" data-i18n="tryReward3">十分钟自由时间</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="try-preview reveal">
+                    <div class="try-card">
+                        <div class="try-card-head">
+                            <span data-i18n="tryCardToday">今日习惯</span>
+                            <span class="try-streak" id="tryStreakWrap">🔥 <b id="tryStreakNum">0</b> <span data-i18n="tryStreakUnit">天</span></span>
+                        </div>
+                        <div class="identity try-identity">
+                            <span data-i18n="identityLabel">我的身份</span>
+                            <strong id="tryIdentityOut">我是一个爱运动的人</strong>
+                        </div>
+                        <div class="try-line"><span aria-hidden="true">💡</span><span class="try-line-label" data-i18n="tryCueLabel">提示</span><span id="tryCueOut">早晨闹钟响后</span></div>
+                        <div class="try-line"><span aria-hidden="true">🎁</span><span class="try-line-label" data-i18n="tryRewardLabel">奖励</span><span id="tryRewardOut">一杯好咖啡</span></div>
+                        <button type="button" class="try-checkin" id="tryCheckin" aria-label="Check in">
+                            <svg viewBox="0 0 76 76" width="76" height="76" aria-hidden="true">
+                                <defs><linearGradient id="tryGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007AFF"/><stop offset="1" stop-color="#5AC8FA"/></linearGradient></defs>
+                                <circle class="try-ring-track" cx="38" cy="38" r="33"/>
+                                <circle class="try-ring-fill" cx="38" cy="38" r="33" transform="rotate(-90 38 38)"/>
+                                <path class="try-check" d="M26 39 l8 8 l16 -17"/>
+                            </svg>
+                        </button>
+                        <span class="try-checkin-label" data-i18n="tryCheckin">点击打卡</span>
+                    </div>
+                    <a class="btn btn-primary try-cta" href="https://apps.apple.com/app/id6748370992" target="_blank" rel="noopener noreferrer" data-i18n="tryCta">在 App 里保存这个习惯</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="how" class="how">
         <div class="container">
+            <span class="section-eyebrow" data-i18n="howEyebrow">上手</span>
             <h2 class="section-title" data-i18n="howTitle">简单三步，开始改变</h2>
             <p class="section-sub" data-i18n="howSub">先想清楚你想成为谁，剩下的每天做一点。</p>
             <div class="steps">
@@ -182,6 +255,7 @@
 
     <section id="features" class="features">
         <div class="container">
+            <span class="section-eyebrow" data-i18n="featuresEyebrow">功能</span>
             <h2 class="section-title" data-i18n="featuresTitle">强大功能，助您成功</h2>
             <p class="section-sub" data-i18n="featuresSub">为长期坚持而设计的每一个细节。</p>
             <div class="features-grid">
@@ -219,8 +293,76 @@
         </div>
     </section>
 
+    <section id="personas" class="personas">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="personasEyebrow">适合谁</span>
+            <h2 class="section-title" data-i18n="personasTitle">为你想成为的身份而设计</h2>
+            <p class="section-sub" data-i18n="personasSub">四种常见身份，四套现成的功能组合。</p>
+            <div class="personas-grid">
+                <div class="persona-card reveal">
+                    <div class="persona-emoji" aria-hidden="true">📚</div>
+                    <h3 data-i18n="persona1Name">备考学生</h3>
+                    <p class="persona-quote" data-i18n="persona1Quote">「我是一个专注的人」</p>
+                    <p class="persona-desc" data-i18n="persona1Desc">用番茄钟锁住专注时段，每日打卡稳住复习节奏。</p>
+                    <div class="persona-tags"><span data-i18n="feature3Title">番茄钟专注</span><span data-i18n="feature5Title">连续记录</span></div>
+                </div>
+                <div class="persona-card reveal">
+                    <div class="persona-emoji" aria-hidden="true">🏃</div>
+                    <h3 data-i18n="persona2Name">健身新手</h3>
+                    <p class="persona-quote" data-i18n="persona2Quote">「我是一个爱运动的人」</p>
+                    <p class="persona-desc" data-i18n="persona2Desc">给运动设好提示和奖励，用连续记录把热情变成惯性。</p>
+                    <div class="persona-tags"><span data-i18n="feature2Title">习惯循环</span><span data-i18n="feature5Title">连续记录</span></div>
+                </div>
+                <div class="persona-card reveal">
+                    <div class="persona-emoji" aria-hidden="true">🌅</div>
+                    <h3 data-i18n="persona3Name">早起挑战者</h3>
+                    <p class="persona-quote" data-i18n="persona3Quote">「我是一个早起者」</p>
+                    <p class="persona-desc" data-i18n="persona3Desc">从身份出发设定晨间流程，让每个清晨都强化一次「早起者」。</p>
+                    <div class="persona-tags"><span data-i18n="feature1Title">身份驱动</span><span data-i18n="feature2Title">习惯循环</span></div>
+                </div>
+                <div class="persona-card reveal">
+                    <div class="persona-emoji" aria-hidden="true">✈️</div>
+                    <h3 data-i18n="persona4Name">双语学习者</h3>
+                    <p class="persona-quote" data-i18n="persona4Quote">「我是一个每天学外语的人」</p>
+                    <p class="persona-desc" data-i18n="persona4Desc">中英界面随心切换，用数据分析看清每天的坚持曲线。</p>
+                    <div class="persona-tags"><span data-i18n="feature6Title">中英双语</span><span data-i18n="feature4Title">数据分析</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compare" class="compare">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="compareEyebrow">对比</span>
+            <h2 class="section-title" data-i18n="compareTitle">为什么用 WeiRabits，而不是……</h2>
+            <p class="section-sub" data-i18n="compareSub">和普通待办清单、纸质打卡表放在一起看。</p>
+            <div class="table-scroll reveal">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n="compareColFeature">能力</th>
+                            <th scope="col"><span class="compare-hero-name">WeiRabits</span></th>
+                            <th scope="col" data-i18n="compareColTodo">备忘录清单</th>
+                            <th scope="col" data-i18n="compareColPaper">纸质打卡表</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row" data-i18n="compareRow1">身份驱动而非任务驱动</th><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                        <tr><th scope="row" data-i18n="compareRow2">提示-行动-奖励回路</th><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                        <tr><th scope="row" data-i18n="compareRow3">连续记录激励</th><td class="yes">✓</td><td class="no">—</td><td class="part" data-i18n="comparePartial">部分</td></tr>
+                        <tr><th scope="row" data-i18n="compareRow4">内置番茄钟</th><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                        <tr><th scope="row" data-i18n="compareRow5">数据分析与建议</th><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                        <tr><th scope="row" data-i18n="compareRow6">免费无广告</th><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="compare-note" data-i18n="compareNote">* 泛指常见清单工具与纸质表格的一般用法，不针对任何具体产品。</p>
+        </div>
+    </section>
+
     <section id="screenshots" class="screenshots">
         <div class="container">
+            <span class="section-eyebrow" data-i18n="screenshotsEyebrow">界面</span>
             <h2 class="section-title" data-i18n="screenshotsTitle">应用界面展示</h2>
             <p class="section-sub" data-i18n="screenshotsSub">左右滑动，点击可放大查看。</p>
             <div class="gallery">
@@ -249,6 +391,46 @@
         </div>
     </section>
 
+    <section id="method" class="method">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="methodEyebrow">方法论</span>
+            <h2 class="section-title" data-i18n="methodTitle">为什么是身份，而不是目标？</h2>
+            <p class="section-sub" data-i18n="methodSub">把《原子习惯》的核心理念，落成每天都能用的功能。</p>
+            <div class="method-grid">
+                <div class="method-copy">
+                    <div class="method-point reveal">
+                        <h3 data-i18n="method1Title">身份认同 → 「我是……」声明</h3>
+                        <p data-i18n="method1Desc">目标会做完，身份会留下。WeiRabits 让每个习惯都挂在一个「我是……」的身份之下，每次打卡都是给这个身份投一票。</p>
+                    </div>
+                    <div class="method-point reveal">
+                        <h3 data-i18n="method2Title">提示-行动-奖励 → 习惯循环</h3>
+                        <p data-i18n="method2Desc">与其靠意志力，不如设计环境。为习惯配置提示、渴望、行动与奖励，好习惯会被环境自动触发。</p>
+                    </div>
+                    <div class="method-point reveal">
+                        <h3 data-i18n="method3Title">复利效应 → 连续记录与数据分析</h3>
+                        <p data-i18n="method3Desc">每天进步 1%，一年就是复利级的差距。连续记录和数据分析把这条看不见的曲线画给你看。</p>
+                    </div>
+                    <p class="method-note" data-i18n="methodNote">方法论灵感来自《原子习惯》（James Clear 著）；WeiRabits 与原书作者及出版方无任何隶属关系。</p>
+                </div>
+                <div class="method-fig reveal">
+                    <svg viewBox="0 0 360 300" aria-hidden="true">
+                        <defs><linearGradient id="methodGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#007AFF"/><stop offset="1" stop-color="#5AC8FA"/></linearGradient></defs>
+                        <path class="m-axis" d="M40 20 V 260 H 340"/>
+                        <line class="m-linear" x1="40" y1="250" x2="330" y2="185"/>
+                        <path class="m-curve" d="M40 250 C 140 246, 250 225, 330 60"/>
+                        <g class="m-anim">
+                            <circle class="m-dot" cx="330" cy="60" r="6"/>
+                            <text class="m-label" x="252" y="82" text-anchor="end" data-i18n="methodCurveLabel">复利式坚持</text>
+                            <text class="m-label-sub" x="252" y="212" text-anchor="end" data-i18n="methodLinearLabel">线性预期</text>
+                            <text class="m-label-sub" x="340" y="282" text-anchor="end" data-i18n="methodAxisX">时间</text>
+                        </g>
+                    </svg>
+                    <div class="method-fig-caption" data-i18n="methodFigCaption">每天进步一点点，差距按复利增长。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="privacy">
         <div class="container privacy-card">
             <div class="privacy-lead">
@@ -266,6 +448,7 @@
 
     <section id="faq" class="faq">
         <div class="container">
+            <span class="section-eyebrow" data-i18n="faqEyebrow">答疑</span>
             <h2 class="section-title" data-i18n="faqTitle">常见问题</h2>
             <div class="faq-list">
                 <details class="faq-item reveal"><summary data-i18n="q1">WeiRabits 需要联网吗？</summary><p data-i18n="a1">不需要。所有功能均可离线使用，您的习惯数据全部保存在设备本地，不会离开手机。</p></details>
@@ -274,6 +457,8 @@
                 <details class="faq-item reveal"><summary data-i18n="q4">习惯循环是怎么运作的？</summary><p data-i18n="a4">为习惯设置提示、渴望、行动与奖励，形成完整回路，让好习惯自然而然被触发和重复。</p></details>
                 <details class="faq-item reveal"><summary data-i18n="q5">番茄钟如何与习惯结合？</summary><p data-i18n="a5">可为需要专注的习惯启动内置番茄钟，专注时长会自动计入统计，帮助你看到坚持的成果。</p></details>
                 <details class="faq-item reveal"><summary data-i18n="q6">支持哪些语言？</summary><p data-i18n="a6">完整支持简体中文与英文界面，可随时一键切换。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q7">完全免费吗？有广告吗？</summary><p data-i18n="a7">完全免费，没有广告。下载后即可使用全部核心功能。</p></details>
+                <details class="faq-item reveal"><summary data-i18n="q8">WeiRabits 和《原子习惯》是什么关系？</summary><p data-i18n="a8">应用的方法论——身份驱动、习惯循环、复利式坚持——受《原子习惯》一书启发；WeiRabits 由 WeiProduct 独立开发，与原书作者及出版方没有任何隶属或合作关系。</p></details>
             </div>
         </div>
     </section>
@@ -296,10 +481,35 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="nav-brand" href="#" aria-label="WeiRabits">
+                        <span class="brand-icon" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" width="34" height="34"><defs><linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#007AFF"/><stop offset="1" stop-color="#5AC8FA"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#bgf)"/><circle cx="50" cy="50" r="26" fill="none" stroke="#fff" stroke-width="7"/><path d="M38 51 l8 8 l16 -18" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="brand-name">WeiRabits</span>
+                    </a>
+                    <p data-i18n="footerTagline">身份驱动的习惯养成，数据全部保存在你自己的设备上。</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerProduct">产品</h4>
+                    <a href="#how" data-i18n="navHow">使用流程</a>
+                    <a href="#features" data-i18n="navFeatures">功能特点</a>
+                    <a href="#try" data-i18n="footerTry">互动演示</a>
+                    <a href="#screenshots" data-i18n="navScreenshots">应用截图</a>
+                    <a href="https://apps.apple.com/app/id6748370992" target="_blank" rel="noopener noreferrer" data-i18n="downloadBtn">App Store 下载</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerSupport">支持</h4>
+                    <a href="#faq" data-i18n="navFaq">常见问题</a>
+                    <a href="docs/privacy-policy.html" data-i18n="privacyPolicy">隐私政策</a>
+                    <a href="mailto:1597498880weiproduct@gmail.com?subject=WeiRabits%20support" data-i18n="footerContact">联系我们</a>
+                    <a href="https://weiproduct.com/" target="_blank" rel="noopener noreferrer" data-i18n="footerCompany">WeiProduct 官网</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
                 <p>&copy; <span id="currentYear">2026</span> <span data-i18n="footerRights">WeiProduct. 保留所有权利。</span></p>
                 <p data-i18n="footerMadeBy">Built by WeiProduct</p>
-                <p><a href="docs/privacy-policy.html" data-i18n="privacyPolicy">隐私政策</a> · Contact: <a href="mailto:1597498880weiproduct@gmail.com?subject=WeiRabits%20support">1597498880weiproduct@gmail.com</a></p>
             </div>
         </div>
     </footer>

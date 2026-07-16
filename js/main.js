@@ -38,9 +38,51 @@ const I18N = {
     q4: '习惯循环是怎么运作的？', a4: '为习惯设置提示、渴望、行动与奖励，形成完整回路，让好习惯自然而然被触发和重复。',
     q5: '番茄钟如何与习惯结合？', a5: '可为需要专注的习惯启动内置番茄钟，专注时长会自动计入统计，帮助你看到坚持的成果。',
     q6: '支持哪些语言？', a6: '完整支持简体中文与英文界面，可随时一键切换。',
+    q7: '完全免费吗？有广告吗？', a7: '完全免费，没有广告。下载后即可使用全部核心功能。',
+    q8: 'WeiRabits 和《原子习惯》是什么关系？', a8: '应用的方法论——身份驱动、习惯循环、复利式坚持——受《原子习惯》一书启发；WeiRabits 由 WeiProduct 独立开发，与原书作者及出版方没有任何隶属或合作关系。',
     downloadTitle: '立即开始您的习惯养成之旅', downloadSubtitle: '完全免费，无广告，注重隐私保护。', downloadNote: '免费下载 · 无广告 · 尊重隐私',
     footerRights: 'WeiProduct. 保留所有权利。', footerMadeBy: 'Built by WeiProduct', privacyPolicy: '隐私政策',
-    stickySub: '习惯养成 · 免费', stickyGet: '获取'
+    footerTagline: '身份驱动的习惯养成，数据全部保存在你自己的设备上。',
+    footerProduct: '产品', footerSupport: '支持', footerTry: '互动演示', footerContact: '联系我们', footerCompany: 'WeiProduct 官网',
+    stickySub: '习惯养成 · 免费', stickyGet: '获取',
+    howEyebrow: '上手', featuresEyebrow: '功能', screenshotsEyebrow: '界面', faqEyebrow: '答疑',
+    tryEyebrow: '亲手试试',
+    tryTitle: '30 秒，搭好你的第一个习惯回路',
+    trySub: '选一个身份、一个提示和一个奖励，右边就是它在 App 里的样子。',
+    tryStep1: '选择身份', tryStep2: '选择提示', tryStep3: '选择奖励',
+    tryIdentity1: '我是一个爱运动的人', tryIdentity2: '我是一个阅读者', tryIdentity3: '我是一个早起者',
+    tryCue1: '早晨闹钟响后', tryCue2: '午饭之后', tryCue3: '晚上刷牙前',
+    tryReward1: '一杯好咖啡', tryReward2: '连续记录 +1', tryReward3: '十分钟自由时间',
+    tryCardToday: '今日习惯', tryStreakUnit: '天',
+    tryCueLabel: '提示', tryRewardLabel: '奖励',
+    tryCheckin: '点击打卡', tryCta: '在 App 里保存这个习惯',
+    personasEyebrow: '适合谁',
+    personasTitle: '为你想成为的身份而设计',
+    personasSub: '四种常见身份，四套现成的功能组合。',
+    persona1Name: '备考学生', persona1Quote: '「我是一个专注的人」', persona1Desc: '用番茄钟锁住专注时段，每日打卡稳住复习节奏。',
+    persona2Name: '健身新手', persona2Quote: '「我是一个爱运动的人」', persona2Desc: '给运动设好提示和奖励，用连续记录把热情变成惯性。',
+    persona3Name: '早起挑战者', persona3Quote: '「我是一个早起者」', persona3Desc: '从身份出发设定晨间流程，让每个清晨都强化一次「早起者」。',
+    persona4Name: '双语学习者', persona4Quote: '「我是一个每天学外语的人」', persona4Desc: '中英界面随心切换，用数据分析看清每天的坚持曲线。',
+    compareEyebrow: '对比',
+    compareTitle: '为什么用 WeiRabits，而不是……',
+    compareSub: '和普通待办清单、纸质打卡表放在一起看。',
+    compareColFeature: '能力', compareColTodo: '备忘录清单', compareColPaper: '纸质打卡表',
+    compareRow1: '身份驱动而非任务驱动', compareRow2: '提示-行动-奖励回路', compareRow3: '连续记录激励',
+    compareRow4: '内置番茄钟', compareRow5: '数据分析与建议', compareRow6: '免费无广告',
+    comparePartial: '部分',
+    compareNote: '* 泛指常见清单工具与纸质表格的一般用法，不针对任何具体产品。',
+    methodEyebrow: '方法论',
+    methodTitle: '为什么是身份，而不是目标？',
+    methodSub: '把《原子习惯》的核心理念，落成每天都能用的功能。',
+    method1Title: '身份认同 → 「我是……」声明',
+    method1Desc: '目标会做完，身份会留下。WeiRabits 让每个习惯都挂在一个「我是……」的身份之下，每次打卡都是给这个身份投一票。',
+    method2Title: '提示-行动-奖励 → 习惯循环',
+    method2Desc: '与其靠意志力，不如设计环境。为习惯配置提示、渴望、行动与奖励，好习惯会被环境自动触发。',
+    method3Title: '复利效应 → 连续记录与数据分析',
+    method3Desc: '每天进步 1%，一年就是复利级的差距。连续记录和数据分析把这条看不见的曲线画给你看。',
+    methodNote: '方法论灵感来自《原子习惯》（James Clear 著）；WeiRabits 与原书作者及出版方无任何隶属关系。',
+    methodCurveLabel: '复利式坚持', methodLinearLabel: '线性预期', methodAxisX: '时间',
+    methodFigCaption: '每天进步一点点，差距按复利增长。'
   },
   'en': {
     skip: 'Skip to content',
@@ -80,9 +122,51 @@ const I18N = {
     q4: 'How does the habit loop work?', a4: 'Set a cue, craving, routine and reward for each habit to form a complete loop, so good habits get triggered and repeated naturally.',
     q5: 'How does the Pomodoro timer fit in?', a5: 'Start the built-in Pomodoro timer for habits that need focus; the focused time is logged into your stats so you can see your effort pay off.',
     q6: 'Which languages are supported?', a6: 'Full support for both Simplified Chinese and English interfaces, switchable anytime with one tap.',
+    q7: 'Is it really free? Any ads?', a7: 'Completely free with no ads. All core features are available right after download.',
+    q8: 'How is WeiRabits related to Atomic Habits?', a8: 'The methodology — identity-driven habits, the habit loop, compounding consistency — is inspired by the book Atomic Habits. WeiRabits is built independently by WeiProduct and is not affiliated with the book\'s author or publisher.',
     downloadTitle: 'Start building better habits today', downloadSubtitle: 'Completely free, no ads, privacy-first.', downloadNote: 'Free download · No ads · Privacy respected',
     footerRights: 'WeiProduct. All rights reserved.', footerMadeBy: 'Built by WeiProduct', privacyPolicy: 'Privacy Policy',
-    stickySub: 'Habit building · Free', stickyGet: 'Get'
+    footerTagline: 'Identity-driven habit building, with all data stored on your own device.',
+    footerProduct: 'Product', footerSupport: 'Support', footerTry: 'Interactive demo', footerContact: 'Contact us', footerCompany: 'WeiProduct site',
+    stickySub: 'Habit building · Free', stickyGet: 'Get',
+    howEyebrow: 'Get started', featuresEyebrow: 'Features', screenshotsEyebrow: 'Screenshots', faqEyebrow: 'FAQ',
+    tryEyebrow: 'Try it now',
+    tryTitle: 'Build your first habit loop in 30 seconds',
+    trySub: 'Pick an identity, a cue and a reward — the card shows how it looks in the app.',
+    tryStep1: 'Pick an identity', tryStep2: 'Pick a cue', tryStep3: 'Pick a reward',
+    tryIdentity1: 'I am an active person', tryIdentity2: 'I am a reader', tryIdentity3: 'I am an early riser',
+    tryCue1: 'After my morning alarm', tryCue2: 'After lunch', tryCue3: 'Before brushing teeth at night',
+    tryReward1: 'A good coffee', tryReward2: 'Streak +1', tryReward3: '10 minutes of free time',
+    tryCardToday: "Today's habit", tryStreakUnit: 'day streak',
+    tryCueLabel: 'Cue', tryRewardLabel: 'Reward',
+    tryCheckin: 'Tap to check in', tryCta: 'Save this habit in the app',
+    personasEyebrow: "Who it's for",
+    personasTitle: 'Built for who you want to become',
+    personasSub: 'Four common identities, four ready-made feature combos.',
+    persona1Name: 'Exam-season student', persona1Quote: '"I am a focused person"', persona1Desc: 'Lock in focus blocks with the Pomodoro timer and keep revision on track with daily check-ins.',
+    persona2Name: 'Fitness beginner', persona2Quote: '"I am an active person"', persona2Desc: 'Give workouts a cue and a reward, then let streaks turn motivation into momentum.',
+    persona3Name: 'Early riser', persona3Quote: '"I am an early riser"', persona3Desc: 'Build the morning routine from identity, so every sunrise reinforces the early riser in you.',
+    persona4Name: 'Language learner', persona4Quote: '"I learn a language every day"', persona4Desc: 'Switch between English and Chinese freely, and watch your daily consistency in analytics.',
+    compareEyebrow: 'Compare',
+    compareTitle: 'Why WeiRabits instead of…',
+    compareSub: 'Side by side with a plain to-do list and a paper tracker.',
+    compareColFeature: 'Capability', compareColTodo: 'Plain to-do list', compareColPaper: 'Paper tracker',
+    compareRow1: 'Identity-driven, not task-driven', compareRow2: 'Cue-routine-reward loop', compareRow3: 'Streak motivation',
+    compareRow4: 'Built-in Pomodoro', compareRow5: 'Analytics & insights', compareRow6: 'Free, no ads',
+    comparePartial: 'Partial',
+    compareNote: '* Refers to typical to-do tools and paper trackers in general, not any specific product.',
+    methodEyebrow: 'The method',
+    methodTitle: 'Why identity, not goals?',
+    methodSub: 'The core ideas of Atomic Habits, turned into features you use every day.',
+    method1Title: 'Identity → "I am…" statements',
+    method1Desc: 'Goals end; identity stays. Every habit in WeiRabits hangs under an "I am…" statement, and every check-in casts a vote for that identity.',
+    method2Title: 'Cue-routine-reward → the habit loop',
+    method2Desc: 'Design the environment instead of relying on willpower. Configure cue, craving, routine and reward, and good habits get triggered automatically.',
+    method3Title: 'Compounding → streaks & analytics',
+    method3Desc: 'Get 1% better every day and a year compounds dramatically. Streaks and analytics draw that invisible curve for you.',
+    methodNote: 'Methodology inspired by Atomic Habits by James Clear; WeiRabits is not affiliated with the author or publisher.',
+    methodCurveLabel: 'Compounding habits', methodLinearLabel: 'Linear expectations', methodAxisX: 'Time',
+    methodFigCaption: 'A little better every day — the gap compounds.'
   }
 };
 
@@ -99,6 +183,7 @@ function applyLang(lang) {
   const ls = document.getElementById('langSwitch');
   if (ls) ls.textContent = currentLang === 'zh-CN' ? 'EN' : '中文';
   try { localStorage.setItem('lang', currentLang); } catch (e) {}
+  renderTryPreview();
 }
 
 function initLang() {
@@ -178,6 +263,53 @@ function initGallery() {
   });
 }
 
+// ===== Try-it habit loop builder =====
+const tryState = { identity: 'tryIdentity1', cue: 'tryCue1', reward: 'tryReward1' };
+
+function renderTryPreview() {
+  const t = I18N[currentLang];
+  const idOut = document.getElementById('tryIdentityOut');
+  if (!idOut) return;
+  idOut.textContent = t[tryState.identity];
+  document.getElementById('tryCueOut').textContent = t[tryState.cue];
+  document.getElementById('tryRewardOut').textContent = t[tryState.reward];
+}
+
+function initTryDemo() {
+  [['tryIdentity', 'identity'], ['tryCue', 'cue'], ['tryReward', 'reward']].forEach(([id, prop]) => {
+    const wrap = document.getElementById(id);
+    if (!wrap) return;
+    wrap.querySelectorAll('.try-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        wrap.querySelectorAll('.try-chip').forEach(c => {
+          c.classList.remove('selected');
+          c.setAttribute('aria-pressed', 'false');
+        });
+        chip.classList.add('selected');
+        chip.setAttribute('aria-pressed', 'true');
+        tryState[prop] = chip.dataset.key;
+        renderTryPreview();
+      });
+    });
+  });
+
+  const btn = document.getElementById('tryCheckin');
+  const num = document.getElementById('tryStreakNum');
+  const streak = document.getElementById('tryStreakWrap');
+  if (!btn || !num) return;
+  let days = 0;
+  btn.addEventListener('click', () => {
+    days += 1;
+    num.textContent = days;
+    btn.classList.add('done');
+    if (streak) {
+      streak.classList.remove('bump');
+      void streak.offsetWidth;
+      streak.classList.add('bump');
+    }
+  });
+}
+
 // ===== Scroll reveal =====
 function initReveal() {
   const els = document.querySelectorAll('.reveal');
@@ -194,10 +326,15 @@ function initReveal() {
 function initScroll() {
   const nav = document.getElementById('navbar');
   const sticky = document.getElementById('stickyCta');
+  const progress = document.getElementById('scrollProgressBar');
   const onScroll = () => {
     const y = window.scrollY;
     if (nav) nav.classList.toggle('scrolled', y > 20);
     if (sticky) sticky.classList.toggle('show', y > 620);
+    if (progress) {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = max > 0 ? Math.min(100, (y / max) * 100) + '%' : '0%';
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -208,6 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initLang();
   initGallery();
+  initTryDemo();
   initReveal();
   initScroll();
 
