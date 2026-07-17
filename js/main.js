@@ -87,7 +87,7 @@ const I18N = {
   'en': {
     skip: 'Skip to content',
     navHow: 'How it works', navFeatures: 'Features', navScreenshots: 'Screenshots', navFaq: 'FAQ', navGet: 'Get App',
-    heroEyebrow: '✦ Powered by Atomic Habits',
+    heroEyebrow: '✦ Inspired by Atomic Habits',
     heroTitle: 'Build Habits That Stick',
     heroSubtitle: 'Start from who you want to be, then let the Cue → Craving → Routine → Reward loop help you build habits that actually last.',
     downloadBtn: 'Download on App Store', learnMore: 'Learn more',
